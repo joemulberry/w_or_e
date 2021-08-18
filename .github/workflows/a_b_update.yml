@@ -1,4 +1,4 @@
-name: base_update
+name: w_or_e_pct
 
 on: 
   schedule:
