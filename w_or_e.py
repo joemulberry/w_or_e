@@ -6,6 +6,9 @@ url = 'https://raw.githubusercontent.com/joemulberry/parallel/main/data/opensea_
 resp = requests.get(url)
 os_data = json.loads(resp.text)
 
+url = 'https://raw.githubusercontent.com/joemulberry/w_or_e/main/ask_bids.json'
+resp = requests.get(url)
+w_or_e_data = json.loads(resp.text)
 
 eth=0
 not_eth = 0
@@ -33,6 +36,9 @@ di = {
     't': time()
     }
 
-print(di)
+w_or_e_data.append(di)
 
-    
+print(w_or_e_data)
+
+with open('ask_bids.json', 'w') as fout:
+    json.dump(w_or_e_data, fout)
