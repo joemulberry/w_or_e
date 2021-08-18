@@ -42,3 +42,6 @@ print(w_or_e_data)
 
 with open('ask_bids.json', 'w') as fout:
     json.dump(w_or_e_data, fout)
+
+with open('ask_bids_now.json', 'w') as fout:
+    json.dump([di], fout)
